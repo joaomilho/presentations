@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'treetop'
+Treetop.load "analyze"
+p = AnalyzeParser.new
+puts p.parse(ARGV.first || "<<<pADDa>MULTb>DIVc>").val

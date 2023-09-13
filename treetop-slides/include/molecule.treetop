@@ -1,0 +1,11 @@
+grammar Molecule
+  include Atom
+
+  rule molecule
+    (atom quantity?)+
+  end
+
+  rule quantity
+    [1-9] [0-9]*
+  end
+end

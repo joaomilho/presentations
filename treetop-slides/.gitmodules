@@ -1,0 +1,6 @@
+[submodule "treetop-brainfuck"]
+	path = treetop-brainfuck
+	url = git@github.com:softa/treetop-brainfuck.git
+[submodule "rl"]
+	path = rl
+	url = git@github.com:softa/rl

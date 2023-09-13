@@ -1,0 +1,37 @@
+grammar Email
+  rule email
+    user at domain dot type dot country
+  end
+
+  rule user
+    word
+  end
+
+  rule at
+    "@"
+  end
+
+  rule domain
+    word
+  end
+
+  rule word
+    [\w]+
+  end
+
+  rule dot
+    "."
+  end
+
+  rule type
+    "co" / "com" / "net" / "org" / "info" / "museum"
+  end
+
+  rule country
+    "br" / "ar" / "uy" / "us" / "il" {
+      def brazil?
+        text_value == 'br'
+      end
+    }
+  end
+end

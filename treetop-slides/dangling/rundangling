@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'treetop'
+Treetop.load "dangling"
+p = DanglingParser.new
+puts p.parse("if(exp) stmt else stmt").inspect

@@ -1,0 +1,32 @@
+grammar Csv
+  rule file
+		line t:(nl line)* {
+			def header
+				line.values
+			end
+			def lines
+				t.elements.map{|e| Hash[header.zip(e.line.values)] }
+			end
+		}
+  end
+	rule line
+		l:(value sep)* value {
+			def values
+				l.elements.map{|e| e.value.text } << value.text
+			end
+		}
+	end
+  rule value
+    [^,\n]+ {
+			def text
+				text_value
+			end
+		}
+  end
+  rule sep
+    ','
+  end
+  rule nl
+    [\n]
+  end
+end

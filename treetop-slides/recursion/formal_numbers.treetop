@@ -1,0 +1,11 @@
+grammar Formal
+  rule num
+    s:succ* zero { def n; s.elements.size end }
+  end
+  rule succ
+    'S'
+  end
+  rule zero
+    'O'
+  end
+end

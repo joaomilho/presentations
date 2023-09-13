@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'treetop'
+require 'klass'
+
+Treetop.load('klass')
+puts KlassParser.new.parse(ARGV.first || "a").zaaap

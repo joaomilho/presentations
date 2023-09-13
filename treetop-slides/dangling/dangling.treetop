@@ -1,0 +1,14 @@
+grammar Dangling
+  rule if
+    'if(' exp ')' stmt 'else' stmt / 'if(' exp ')' stmt
+  end
+  rule exp
+	spaces? 'exp' spaces?
+  end
+  rule stmt
+    spaces? if / spaces? 'stmt' spaces?
+  end
+  rule spaces
+   [\s]+
+  end
+end

@@ -1,0 +1,29 @@
+grammar Csv
+  rule file
+		l:(line nl)* line {
+			def lines
+				l.elements.map{|e| e.line.values } << line.values
+			end
+		}
+  end
+	rule line
+		l:(value sep)* value {
+			def values
+				l.elements.map{|e| e.value.text } << value.text
+			end
+		}
+	end
+  rule value
+    [^,\n]+ {
+			def text
+				text_value
+			end
+		}
+  end
+  rule sep
+    ','
+  end
+  rule nl
+    [\n]
+  end
+end

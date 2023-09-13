@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'treetop'
+Treetop.load 'left_recursion'
+p = LeftRecursionParser.new
+puts p.parse(ARGV.first||"ffff").depth

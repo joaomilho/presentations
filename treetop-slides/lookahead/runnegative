@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'treetop'
+Treetop.load 'negative'
+p = NegativeParser.new
+puts p.parse("foobarbaz").inspect
+puts p.parse("foobazbar").inspect

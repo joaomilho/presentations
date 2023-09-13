@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'treetop'
+Treetop.load 'parens'
+p = ParensParser.new
+puts p.parse(ARGV.first||"(((1)))").depth

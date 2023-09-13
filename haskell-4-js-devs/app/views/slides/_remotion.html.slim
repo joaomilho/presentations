@@ -1,0 +1,182 @@
+.step.slide#js-fun[data-x=x_succ data-y=0]
+  q
+    span JS is functional
+    small  all the kids r sayin'
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="javascript"]
+        | var hello = function(){};
+          alert( typeof(hello) );
+    button.exec EXEC
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="javascript"]
+        | $('bt').click(function(){
+            // something here
+          })
+
+.step.slide#js-to-hs[data-x=x_succ data-y=0]
+  q
+    span JS to HS
+    small  examples by remotion
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="javascript" style="font-size:0.85em; line-height: 1.4em"]
+        | var sum = function(x){
+            return function(y){
+              return x + y;
+            }
+          }
+          sum_ten = sum(10);
+          alert( sum_ten(5) );
+    button.exec EXEC
+
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="javascript" style="font-size:0.85em; line-height: 1.4em"]
+        | var sum = function(x){
+            return function(y){
+              return x + y;
+            }
+          }
+          sum_ten = sum(10);
+          sum_ten(5);
+    button.exec EXEC
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="javascript" style="font-size:0.85em; line-height: 1.4em"]
+        | var sum = function(x, y){
+            return x + y;
+          }
+          sum_ten = sum(10);
+          sum_ten(5);
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="javascript" style="font-size:0.85em; line-height: 1.4em"]
+        | var sum = function(x, y){
+            x + y;
+          }
+          sum_ten = sum(10);
+          sum_ten(5);
+
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="javascript" style="font-size:0.85em; line-height: 1.4em"]
+        | var sum = function(x, y){
+            x + y
+          }
+          sum_ten = sum(10)
+          sum_ten(5)
+
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="javascript" style="font-size:0.85em; line-height: 1.4em"]
+        | sum = function(x, y){
+            x + y
+          }
+          sum_ten = sum(10)
+          sum_ten(5)
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="javascript" style="font-size:0.85em; line-height: 1.4em"]
+        | sum = function x, y{
+            x + y
+          }
+          sum_ten = sum 10
+          sum_ten 5
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="javascript" style="font-size:0.85em; line-height: 1.4em"]
+        | sum = x, y{
+            x + y
+          }
+          sum_ten = sum 10
+          sum_ten 5
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="javascript" style="font-size:0.85em; line-height: 1.4em"]
+        | sum x, y = x + y
+          sum_ten = sum 10
+          sum_ten 5
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="haskell" style="font-size:1.4em;line-height:1.4em"]
+        | sum x y = x + y
+          sum_ten = sum 10
+          sum_ten 5
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="javascript" style="font-size:0.8em; line-height: 1.4em"]
+        | result = [1,2,3].map(function(x){
+            return x + 1
+          })
+          alert( result );
+    button.exec EXEC
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="javascript" style="font-size:1em; line-height: 1.4em"]
+        | [1,2,3].map(function(x){
+            return x + 1
+          })
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="javascript" style="line-height: 1.4em"]
+        | [1,2,3].map(function(x){
+            x + 1
+          })
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="javascript" style="line-height: 1.4em"]
+        | [1,2,3].map((x){
+            x + 1
+          })
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="javascript" style="line-height: 1.4em"]
+        | [1,2,3].map((x) x + 1)
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="javascript" style="line-height: 1.4em"]
+        | [1,2,3].map(+1)
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="haskell" style="font-size: 1.5em;line-height: 1.4em"]
+        | map (+1) [1,2,3]

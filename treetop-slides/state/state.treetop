@@ -1,0 +1,19 @@
+grammar State
+  rule program
+   instruction+ <Program>
+  end
+  rule instruction
+    spaces? "set" spaces var spaces val <SetNode>
+		/
+    spaces? "get" spaces var <GetNode>
+  end
+  rule var
+    ([a-z]+)
+  end
+  rule val
+    '"' v:[^"]+ '"'
+  end
+  rule spaces
+    [\s]+
+  end
+end

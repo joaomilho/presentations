@@ -1,0 +1,11 @@
+grammar Negative
+	rule foobar_rest
+	  foobar rest
+	end
+	rule foobar
+		"foo" !"bar"
+	end
+	rule rest
+	  .+
+	end
+end

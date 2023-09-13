@@ -1,0 +1,29 @@
+grammar Analyze
+  rule ltgt
+    '<' operation '>' { def val; operation.val end }
+  end
+  rule operation
+    o1:operand operator o2:operand { def val; operator.exec(o1.val, o2.val) end }
+  end
+  rule operand
+    char / ltgt
+  end
+  rule operator
+    add / sub / mult / div
+  end
+  rule add
+    'ADD' { def exec(a,b) a+b end }
+  end
+  rule sub
+    'SUB' { def exec(a,b) a-b end }
+  end
+  rule mult
+    'MULT' { def exec(a,b) a*b end }
+  end
+  rule div
+    'DIV' { def exec(a,b) a/b end }
+  end
+  rule char
+    [a-z] { def val; text_value[0] end }
+  end
+end

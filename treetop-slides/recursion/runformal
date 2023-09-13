@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'treetop'
+Treetop.load 'formal_numbers'
+p = FormalParser.new
+puts p.parse(ARGV.first||"SSSSSO").n

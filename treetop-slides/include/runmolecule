@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'treetop'
+Treetop.load 'atom'
+Treetop.load 'molecule'
+p = MoleculeParser.new
+puts p.parse("H2O").inspect

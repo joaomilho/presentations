@@ -1,0 +1,155 @@
+.step.slide[data-x=x_succ data-y=0]
+  q
+    span How HS works?
+    small  currying & infix
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="haskell"]
+        | 1 + 1
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="haskell"]
+        | (+) 1 1
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="haskell"]
+        | (+ 1) 1
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="haskell"]
+        | map (+ 1) [1, 2, 3]
+
+.step.slide[data-x=x_succ data-y=0]
+  q
+    span How HS works?
+    small  infinite lists
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="haskell" style="font-size:3.5em;"]
+        | [1..]
+
+.step.slide[data-x=x_succ data-y=0]
+  q
+    span How HS works?
+    small  memoize
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="haskell"]
+        | evens = filter even [1..]
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="haskell"]
+        | evens !! 10000000
+      # take some time and... 20000002
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="haskell"]
+        | evens !! 9999999
+      # right away, sr!!! 20000000
+
+.step.slide[data-x=x_succ data-y=0]
+  q
+    span How HS works?
+    small  recurxon & patrn matchn'
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="haskell"]
+        | fac 0 = 1
+          fac n = n * fac (n - 1)
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="haskell"]
+        | fac n = product [1..n]
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="haskell"]
+        | size [] = 0
+          size (h:t) = 1 + size t
+
+.step.slide[data-x=x_succ data-y=0]
+  q
+    span How HS works?
+    small  typing
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    | on ghci
+    pre
+      code[class="haskell"]
+        | :t size
+    # size :: (Num t1) => [t] -> t1
+
+.step.slide[data-x=x_succ data-y=0]
+  q
+    p[style="font-size:2em"] FUCK.
+    p IS THIS STATICALLY TYPED???
+
+.step.slide[data-x=x_succ data-y=0]
+  q
+    p[style="font-size:2em"] HELL YEAH.
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    p[style="font-size:2em"] IS THIS TOO??
+    pre
+      code[class="haskell"]
+        | filter (<18) [10, 22, 12]
+    # [10, 12]
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    p[style="font-size:2em"] HELL YEAH.
+    pre
+      code[class="haskell"]
+        | :t filter
+    # filter :: (a -> Bool) -> [a] -> [a]
+
+.step.slide[data-x=x_succ data-y=0]
+  q
+    span How HS works?
+    small  list comprehensions
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="haskell" style="font-size:1.25em"]
+        | [x*2 | x <- [1..10]]  
+  # => [2,4,6,8,10,12,14,16,18,20]  
+
+.step.slide[data-x=x_succ data-y=0]
+  q
+    span How HS works?
+    small  guards
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="haskell"]
+        | phase age
+            | age < 12 = "Child"
+            | age < 21 = "Teen"
+            | age < 45 = "Adult"
+            | age < 125 = "Old"
+            | otherwise = "Matusalem"

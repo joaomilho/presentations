@@ -1,0 +1,5 @@
+grammar LeftRecursion
+  rule f
+   f 'f'  
+  end
+end

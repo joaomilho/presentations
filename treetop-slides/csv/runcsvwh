@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'treetop'
+Treetop.load "csv_with_header"
+p = CsvParser.new
+puts p.parse(File.read(ARGV.first)).lines.inspect

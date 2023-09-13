@@ -1,0 +1,18 @@
+grammar Ops
+  rule paren_opn
+    '(' paren_opn ')' { def val; paren_opn.val end } /
+		opn
+  end
+  rule opn
+    opd opt opd { def val; eval("#{opd1.val} #{opt.text_value} #{opd2.val}").to_i end }
+  end
+  rule opd
+    n / paren_opn
+  end
+  rule opt
+    '+' / '-' / '*' / '/'
+  end
+  rule n
+    [0-9]+ { def val; text_value.to_i end }
+  end
+end

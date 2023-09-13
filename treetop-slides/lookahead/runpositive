@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'treetop'
+Treetop.load 'positive'
+p = PositiveParser.new
+puts p.parse("foobarbaz").inspect
+puts p.parse("foobazbar").inspect

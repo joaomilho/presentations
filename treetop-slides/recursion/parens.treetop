@@ -1,0 +1,15 @@
+grammar Parens
+  rule parens
+    '(' parens ')' {
+			def depth
+				parens.depth + 1
+			end
+		}
+		/
+		[a-z0-9] {
+			def depth
+				0
+			end
+		}
+  end
+end

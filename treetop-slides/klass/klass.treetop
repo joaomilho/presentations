@@ -1,0 +1,5 @@
+grammar Klass
+  rule char
+   [a-z] <Char>
+  end
+end
